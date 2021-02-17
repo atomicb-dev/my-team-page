@@ -1,0 +1,138 @@
+/* Parametros */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap');
+
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        /* outline: 2px dashed purple; */
+    }
+
+/* Normalizadores */
+    h1 {
+        font-family: 'PT Serif', serif;
+        font-size: 36px;
+        font-weight: 700;
+    }
+    h3, p {
+        font-family: 'Poppins', sans-serif;
+    }
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+    }
+    p {
+        font-size: 14px;
+    }
+
+/* Reglas generales */
+    /* Page frame */
+    .frame {
+        width: 100vw;
+        max-width: 1440px;
+        margin: auto;
+        padding: 70px 5% 40px;
+    }
+
+    /* Header */
+    header {
+        width: 100%;
+        padding: 0% 3%;
+    }
+    header h1 {
+        margin-bottom: 35px;
+    }
+    .description h3 {
+        margin: 10px 0px;
+    }
+
+    /* Footer */
+    footer p {
+        font-family: 'Montserrat', sans-serif;
+        color: #A9A9A9;
+        text-align: center;
+    }
+
+/* Reglas específicas */
+    /* Section 1 */
+    .crew {
+        padding: 40px 0px 80px;
+        width: 100%;
+        max-width: 1280px;
+
+        /*flex*/
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .person {
+        width: 50%;
+        max-width: 340px;
+        padding: 0% 5%;
+    }
+    .person div {
+        /*flex*/
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .person span {
+        width: 5px;
+        height: 20px;
+        font-family: 'PT Serif', serif;
+        font-size: 10px;
+        transform: rotate(90deg);
+        white-space: nowrap;
+    }
+    .person img {
+        width: 95%;
+    }
+    .person p {
+        font-weight: 600;
+        margin: 5px 0px;
+    }
+    
+
+/* Responsive */
+
+    @media (max-width: 768px){
+        .crew .person:nth-child(even) {
+            margin-top: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px){
+        p {
+            font-size: 18px;
+        }
+        .person span {
+            font-size: 12px;
+        };
+
+        .frame {
+            padding: 100px 10% 40px;
+        }
+
+        header {
+            margin-bottom: 50px;
+            /*flex*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            width: 45%;
+            margin-right: 15px;
+        }
+        .description {
+            width: 45%;
+        }
+        .person {
+            width: 33.33%;
+            max-width: 340px;
+            padding: 0% 5%;
+        }
+        .crew .person:nth-child(3n+2) {
+            margin-top: 60px;
+        }
+    }
